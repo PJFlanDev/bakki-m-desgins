@@ -1,0 +1,80 @@
+:root {
+  --color-background: #2d1b4e; /* deep purple, close to card bg */
+  --color-accent-green: #c8e632; /* electric lime, matches card title */
+  --color-accent-pink: #e040a0; /* hot pink/magenta from card circles */
+  --color-accent-orange: #e87820; /* warm orange from card ring */
+  --color-text: #f5f0ff; /* soft off-white for body text */
+  --font-text: lato;
+  --font-heading: Raleway;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* border: 1px solid red; */
+}
+
+main {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/bakki-m-hero-collage.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+}
+
+.nav-bakki {
+  color: var(--color-accent-green);
+  font-family: var(--font-text);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.eyebrow {
+  font-family: lato;
+  margin-bottom: 1rem;
+}
+
+.hero {
+  background-color: var(--color-background);
+  color: var(--color-accent-green);
+  padding: 70px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-family: raleway;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 10px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-accent-green);
+  font-family: lato;
+}
+
+nav ul li {
+  list-style: none;
+}
