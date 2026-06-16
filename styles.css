@@ -246,7 +246,7 @@ h1 {
 /* Product pages */
 
 .product-page {
-  background-color: #faf7f2;
+  background-color: #f9f0e8;
 }
 
 .product-page .bg-strip {
@@ -256,7 +256,7 @@ h1 {
 .back-link {
   font-family: var(--font-text);
   font-size: 0.9rem;
-  color: var(--color-accent-green);
+  color: var(--color-accent-orange);
   text-decoration: none;
   padding: 24px 0 0;
   display: inline-block;
@@ -271,7 +271,7 @@ h1 {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-accent-green);
+  background-color: var(--color-accent-orange);
   transition: width 0.4s ease;
 }
 
@@ -281,7 +281,7 @@ h1 {
 
 .page-heading {
   font-family: var(--font-heading);
-  color: var(--color-accent-green);
+  color: var(--color-accent-orange);
   font-size: 2rem;
   padding: 40px 20px 0;
   width: 100%;
@@ -339,7 +339,9 @@ h1 {
   border: 1.5px solid rgba(200, 230, 50, 0.5);
   cursor: pointer;
   padding: 0;
-  transition: border-color 0.2s ease, transform 0.15s ease;
+  transition:
+    border-color 0.2s ease,
+    transform 0.15s ease;
 }
 
 .color-swatch:hover {
