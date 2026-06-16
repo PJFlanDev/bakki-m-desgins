@@ -253,6 +253,32 @@ h1 {
   display: none;
 }
 
+.back-link {
+  font-family: var(--font-text);
+  font-size: 0.9rem;
+  color: var(--color-accent-green);
+  text-decoration: none;
+  padding: 24px 0 0;
+  display: inline-block;
+  position: relative;
+  align-self: flex-start;
+}
+
+.back-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-accent-green);
+  transition: width 0.4s ease;
+}
+
+.back-link:hover::after {
+  width: 100%;
+}
+
 .page-heading {
   font-family: var(--font-heading);
   color: var(--color-accent-green);
