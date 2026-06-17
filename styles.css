@@ -247,6 +247,25 @@ h1 {
 
 .product-page {
   background-color: #f9f0e8;
+  position: relative;
+}
+
+.product-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: url("images/paisley-bg-bakki.jpg");
+  background-repeat: repeat;
+  background-size: 300px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.product-page header,
+.product-page main {
+  position: relative;
+  z-index: 1;
 }
 
 .product-page .bg-strip {
@@ -258,10 +277,15 @@ h1 {
   font-size: 0.9rem;
   color: var(--color-accent-orange);
   text-decoration: none;
-  padding: 24px 0 0;
+  margin-top: 24px;
+  padding: 5px 10px;
   display: inline-block;
   position: relative;
   align-self: flex-start;
+  background-color: rgba(249, 240, 232, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 6px;
 }
 
 .back-link::after {
@@ -283,9 +307,14 @@ h1 {
   font-family: var(--font-heading);
   color: var(--color-accent-orange);
   font-size: 2rem;
-  padding: 40px 20px 0;
-  width: 100%;
-  max-width: 1100px;
+  margin-top: 40px;
+  padding: 10px 20px;
+  width: fit-content;
+  align-self: flex-start;
+  background-color: rgba(249, 240, 232, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 8px;
 }
 
 .product-grid {
