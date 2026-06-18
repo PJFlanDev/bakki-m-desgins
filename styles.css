@@ -16,20 +16,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #f9f0e8;
+  position: relative;
 }
 
-.bg-strip {
+/* Shared houndstooth ground for the whole site */
+body::before {
+  content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
-  display: flex;
-}
-
-.bg-strip img {
-  flex: 1;
-  object-fit: cover;
-  min-width: 0;
+  z-index: 0;
+  background-image: url("images/muted-houndstooth-bg.jpg");
+  background-repeat: repeat;
+  background-size: 300px;
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 /* Navigation */
@@ -102,6 +103,8 @@ main {
   align-items: center;
   padding: 40px 20px;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -256,33 +259,6 @@ h1 {
 }
 
 /* Product pages */
-
-.product-page {
-  background-color: #f9f0e8;
-  position: relative;
-}
-
-.product-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background-image: url("images/paisley-bg-bakki.jpg");
-  background-repeat: repeat;
-  background-size: 300px;
-  opacity: 0.25;
-  pointer-events: none;
-}
-
-.product-page header,
-.product-page main {
-  position: relative;
-  z-index: 1;
-}
-
-.product-page .bg-strip {
-  display: none;
-}
 
 .back-link {
   font-family: var(--font-text);

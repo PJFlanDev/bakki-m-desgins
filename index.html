@@ -12,12 +12,7 @@
     />
     <title>Bakki M Designs</title>
   </head>
-  <body>
-    <div class="bg-strip" aria-hidden="true">
-      <img src="images/5B643FCF-9EB2-4FBF-85DF-9B934C01833A.JPG" alt="" />
-      <img src="images/83C60491-4A09-42C4-9785-87658B6B7FB7.JPG" alt="" />
-      <img src="images/9E75EA7D-A8D9-4E2D-BBA3-B086F2F8D340.JPG" alt="" />
-    </div>
+  <body class="home">
     <header>
       <a class="nav-bakki" href="/index.html">Bakki M Designs</a>
       <nav>
@@ -31,6 +26,7 @@
 
     <main>
       <section class="hero">
+        1
         <p class="eyebrow">Handmade one of a kind jewelry</p>
         <h1>The shop is almost ready</h1>
       </section>
@@ -41,67 +37,79 @@
             <p>Thank you for reaching out! I'll get back to you soon.</p>
           </div>
           <div id="contactContent">
-          <h2>Ask About a Piece</h2>
-          <p class="contact-subtitle">
-            Curious about materials, sizing, or a specific piece? Send a message and I'll get back to you.
-          </p>
-          <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact" />
-            <p hidden><input name="bot-field" /></p>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="your@email.com"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="3"
-                placeholder="Tell us which piece you're interested in..."
-              ></textarea>
-            </div>
-            <button type="submit" class="contact-submit">Send Inquiry</button>
-          </form>
+            <h2>Ask About a Piece</h2>
+            <p class="contact-subtitle">
+              Curious about materials, sizing, or a specific piece? Send a
+              message and I'll get back to you.
+            </p>
+            <form
+              class="contact-form"
+              id="contactForm"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden><input name="bot-field" /></p>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  placeholder="Tell us which piece you're interested in..."
+                ></textarea>
+              </div>
+              <button type="submit" class="contact-submit">Send Inquiry</button>
+            </form>
           </div>
         </div>
       </section>
     </main>
     <script>
-      document.getElementById("contactForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-        const form = e.target;
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(new FormData(form)).toString(),
-        }).then(function (res) {
-          if (res.ok) {
-            document.getElementById("contactContent").hidden = true;
-            document.getElementById("contactSuccess").hidden = false;
-          } else {
-            alert("Something went wrong. Please try again.");
-          }
-        }).catch(function () {
-          alert("Something went wrong. Please try again.");
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const form = e.target;
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(new FormData(form)).toString(),
+          })
+            .then(function (res) {
+              if (res.ok) {
+                document.getElementById("contactContent").hidden = true;
+                document.getElementById("contactSuccess").hidden = false;
+              } else {
+                alert("Something went wrong. Please try again.");
+              }
+            })
+            .catch(function () {
+              alert("Something went wrong. Please try again.");
+            });
         });
-      });
     </script>
   </body>
 </html>
