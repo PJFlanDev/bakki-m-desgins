@@ -41,7 +41,9 @@
           <p class="contact-subtitle">
             Curious about materials, sizing, or a specific piece? Send a message and I'll get back to you.
           </p>
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden><input name="bot-field" /></p>
             <div class="form-group">
               <label for="name">Name</label>
               <input
@@ -76,22 +78,5 @@
         </div>
       </section>
     </main>
-
-    <script>
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const name = document.getElementById("name").value;
-          const message = document.getElementById("message").value;
-          const subject = encodeURIComponent("Product Inquiry from " + name);
-          const body = encodeURIComponent(message);
-          window.location.href =
-            "mailto:bakkim7@gmail.com?subject=" +
-            subject +
-            "&body=" +
-            body;
-        });
-    </script>
   </body>
 </html>
