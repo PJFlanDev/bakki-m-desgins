@@ -159,6 +159,13 @@ h1 {
   margin-bottom: 1.25rem;
 }
 
+.contact-success {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  opacity: 0.85;
+  padding: 1rem 0;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
